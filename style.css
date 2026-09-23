@@ -1,0 +1,648 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, #4b1d73 0%, transparent 35%),
+        radial-gradient(circle at 80% 30%, #123b70 0%, transparent 35%),
+        linear-gradient(135deg, #05001a, #10002b, #020617);
+}
+
+
+/* =========================
+   START SCREEN
+========================= */
+
+#startScreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.gift {
+    font-size: 110px;
+    filter: drop-shadow(0 0 25px #ff4fd8);
+    animation: giftFloat 2s ease-in-out infinite;
+}
+
+#startScreen h1 {
+    font-size: 48px;
+    margin: 25px 0 15px;
+
+    background: linear-gradient(
+        90deg,
+        #ff8de7,
+        #ffffff,
+        #75d7ff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#startScreen p {
+    font-size: 20px;
+    color: #d8d5ff;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: 2px solid rgba(255,255,255,0.6);
+
+    padding: 22px 55px;
+    min-width: 330px;
+
+    border-radius: 60px;
+
+    background: linear-gradient(
+        135deg,
+        #ff4fd8,
+        #7b61ff
+    );
+
+    color: white;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px #ff4fd8,
+        0 0 45px rgba(123,97,255,0.7);
+
+    transition: 0.4s;
+
+    animation: buttonGlow 2s infinite alternate;
+}
+
+button:hover {
+    transform: scale(1.12);
+
+    box-shadow:
+        0 0 30px #ff4fd8,
+        0 0 70px #7b61ff;
+}
+
+@keyframes buttonGlow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+
+/* =========================
+   BIRTHDAY SCREEN
+========================= */
+
+#birthdayScreen {
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 70px 20px;
+
+    position: relative;
+}
+
+
+/* =========================
+   BIRTHDAY TITLE
+========================= */
+
+.birthdayTitle {
+    font-size: 65px;
+    letter-spacing: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #ff62d9,
+        #ffffff,
+        #65d9ff,
+        #ff62d9
+    );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientMove 5s linear infinite;
+
+    text-shadow:
+        0 0 30px rgba(255,80,220,0.5);
+}
+
+#name {
+    font-size: 42px;
+
+    margin-top: 18px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #ff67dc,
+        0 0 25px #ff67dc;
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake {
+    font-size: 125px;
+
+    margin: 30px;
+
+    filter:
+        drop-shadow(0 0 30px #ff65dc);
+
+    animation:
+        cakeFloat 3s ease-in-out infinite;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    max-width: 720px;
+
+    margin: 18px auto;
+
+    padding: 18px 25px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #eeeaff;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.3);
+}
+
+
+/* =========================
+   BALLOONS
+========================= */
+
+.balloon {
+    position: fixed;
+
+    font-size: 55px;
+
+    animation:
+        balloonFloat 5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 0 15px rgba(255,255,255,0.5)
+        );
+}
+
+.balloon1 {
+    left: 5%;
+    top: 15%;
+}
+
+.balloon2 {
+    right: 5%;
+    top: 25%;
+
+    animation-delay: 1s;
+}
+
+.balloon3 {
+    left: 12%;
+    bottom: 10%;
+
+    animation-delay: 2s;
+}
+
+.balloon4 {
+    right: 12%;
+    bottom: 15%;
+
+    animation-delay: 3s;
+}
+
+
+/* =========================
+   BIRTHDAY GIRL SECTION
+========================= */
+
+.journeySection {
+
+    max-width: 1000px;
+
+    margin: 80px auto 40px;
+
+    padding: 45px 20px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(12px);
+}
+
+.journeyTop {
+
+    font-size: 19px;
+
+    color: #e9b8ff;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 0 10px #b967ff;
+}
+
+.journeyTitle {
+
+    font-size: 48px;
+
+    margin: 10px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff9bea,
+            white,
+            #7ddcff
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.journeySubtitle {
+
+    font-size: 18px;
+
+    color: #d8dcff;
+
+    margin: 15px 0;
+}
+
+.journeyLine {
+
+    color: #e88dff;
+
+    font-size: 20px;
+
+    margin:
+        20px 0 35px;
+}
+
+
+/* =========================
+   PHOTO CARDS
+========================= */
+
+.polaroidGallery {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 22px;
+
+    flex-wrap: wrap;
+}
+
+.polaroid {
+
+    width: 190px;
+
+    padding: 9px 9px 14px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        1px solid rgba(255,255,255,0.35);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35),
+        0 0 18px rgba(190,100,255,0.2);
+
+    transition:
+        0.4s;
+}
+
+
+/* IMPORTANT:
+   FULL PHOTO WILL BE VISIBLE
+   NO HEAD/FACE CROPPING
+*/
+
+.polaroid img {
+
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 12px;
+
+    background:
+        rgba(0,0,0,0.18);
+}
+
+.polaroid p {
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-top: 11px;
+
+    color: #ffffff;
+}
+
+.polaroid span {
+
+    font-size: 18px;
+
+    color: #ff9bea;
+}
+
+
+/* PHOTO ANGLES */
+
+.card1 {
+    transform: rotate(-4deg);
+}
+
+.card2 {
+    transform: rotate(3deg);
+}
+
+.card3 {
+    transform: rotate(-2deg);
+}
+
+
+/* PHOTO HOVER */
+
+.polaroid:hover {
+
+    transform:
+        translateY(-12px)
+        scale(1.06)
+        rotate(0deg);
+
+    z-index: 10;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.5),
+        0 0 30px #c56cff;
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.dots {
+
+    margin-top: 30px;
+
+    color: #c487ff;
+
+    font-size: 13px;
+
+    text-shadow:
+        0 0 10px #b45cff;
+}
+
+
+/* =========================
+   BOTTOM MESSAGE
+========================= */
+
+.journeyBottom {
+
+    margin-top: 35px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #e9dfff;
+
+    text-shadow:
+        0 0 15px
+        rgba(190,100,255,0.7);
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+#finalMessage {
+
+    display: none;
+
+    max-width: 750px;
+
+    margin: 60px auto;
+
+    padding: 40px;
+
+    background:
+        rgba(255,255,255,0.09);
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.4),
+        0 0 35px rgba(255,80,220,0.2);
+}
+
+#finalMessage h1 {
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px #ff63da,
+        0 0 30px #ff63da;
+}
+
+#finalMessage p {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin: 15px 0;
+
+    color: #eeeaff;
+}
+
+#finalMessage h2 {
+
+    margin-top: 25px;
+
+    font-size: 30px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes giftFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotate(4deg);
+    }
+}
+
+@keyframes cakeFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-12px);
+    }
+}
+
+@keyframes balloonFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-35px);
+    }
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 300%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .birthdayTitle {
+        font-size: 38px;
+        letter-spacing: 2px;
+    }
+
+    #startScreen h1 {
+        font-size: 34px;
+    }
+
+    #name {
+        font-size: 30px;
+    }
+
+    .cake {
+        font-size: 90px;
+    }
+
+    .message {
+        font-size: 17px;
+    }
+
+    .journeyTitle {
+        font-size: 35px;
+    }
+
+    .journeySubtitle {
+        font-size: 16px;
+    }
+
+    .polaroid {
+        width: 160px;
+    }
+
+    .polaroid img {
+        height: 160px;
+    }
+
+    .journeySection {
+        padding: 35px 10px;
+    }
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise 🎂</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- FIRST SCREEN -->
+
+    <div id="startScreen">
+
+        <div class="gift">
+            🎁
+        </div>
+
+        <h1>
+            A Little Surprise For You...
+        </h1>
+
+        <p>
+            Someone has prepared something special for you ❤️
+        </p>
+
+        <button onclick="openSurprise()">
+            OPEN YOUR SURPRISE 🎁
+        </button>
+
+    </div>
+
+
+
+    <!-- BIRTHDAY SCREEN -->
+
+    <div id="birthdayScreen">
+
+
+        <!-- Balloons -->
+
+        <div class="balloon balloon1">
+            🎈
+        </div>
+
+        <div class="balloon balloon2">
+            🎈
+        </div>
+
+        <div class="balloon balloon3">
+            🎈
+        </div>
+
+        <div class="balloon balloon4">
+            🎈
+        </div>
+
+
+
+        <!-- Birthday Title -->
+
+        <h1 class="birthdayTitle">
+            🎉 HAPPY BIRTHDAY 🎉
+        </h1>
+
+
+        <!-- NAME -->
+
+        <h2 id="name">
+            URMY❤️
+        </h2>
+
+
+        <!-- Cake -->
+
+        <div class="cake">
+            🎂
+        </div>
+
+
+        <!-- Messages -->
+
+        <p class="message">
+
+            Wishing you a very Happy Birthday! 🎂❤️
+
+        </p>
+
+
+        <p class="message">
+
+            May your life always be filled with
+            happiness, laughter, success and
+            beautiful memories. ✨
+
+        </p>
+
+
+        <p class="message">
+
+            May all your dreams come true
+            and may you always keep smiling. 😊❤️
+
+        </p>
+
+
+        <!-- More Surprise Button -->
+
+        <button class="wishButton"
+                onclick="showWish()">
+
+            💌 One More Surprise
+
+        </button>
+
+
+<!-- BIRTHDAY GIRL SECTION -->
+
+<section class="journeySection">
+
+    <div class="journeyTop">
+        ✨ Today is all about you... ✨
+    </div>
+
+    <h2 class="journeyTitle">
+     The Birthday Girl 👸🏻💖
+</h2>
+
+    <p class="journeySubtitle">
+        A little collection of beautiful moments from her journey 💫
+    </p>
+
+    <div class="journeyLine">
+        ♡ ───────── ✦ ───────── ♡
+    </div>
+
+
+    <div class="polaroidGallery">
+
+        <div class="polaroid card1">
+
+            <img src="{{ url_for('static', filename='photos/photo1.jpg') }}"
+                 alt="Birthday Girl Memory 1">
+
+            <p>Her Beautiful Smile ✨</p>
+
+            <span>♡</span>
+
+        </div>
+
+
+        <div class="polaroid card2">
+
+            <img src="{{ url_for('static', filename='photos/photo2.jpg') }}"
+                 alt="Birthday Girl Memory 2">
+
+            <p>Her Special Moments 🌸</p>
+
+            <span>♡</span>
+
+        </div>
+
+
+        <div class="polaroid card3 activeCard">
+
+            <img src="{{ url_for('static', filename='photos/photo3.jpg') }}"
+                 alt="Birthday Girl Memory 3">
+
+            <p>Birthday Girl 🎂</p>
+
+            <span>♡</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="dots">
+        ● &nbsp; ● &nbsp; ●
+    </div>
+
+
+    <div class="journeyBottom">
+
+        A beautiful person deserves<br>
+        a beautiful birthday. 🎂✨
+
+    </div>
+
+</section>
+
+        <!-- FINAL MESSAGE -->
+
+        <div id="finalMessage">
+
+            <h1>
+                ❤️ A Special Message ❤️
+            </h1>
+
+            <p>
+
+                Today is your special day,
+                so I just want to wish you
+                lots of happiness and beautiful
+                moments in the coming year.
+
+            </p>
+
+            <p>
+
+                Keep smiling, keep shining
+                and enjoy your special day! ✨
+
+            </p>
+
+            <h2>
+
+                HAPPY BIRTHDAY! 🎂🎉❤️
+
+            </h2>
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+
+</body>
+
+</html>
